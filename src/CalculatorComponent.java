@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.util.Date;
 
 public class CalculatorComponent extends JComponent {
 
@@ -11,7 +12,7 @@ public class CalculatorComponent extends JComponent {
                 RenderingHints.VALUE_ANTIALIAS_ON);
         Main main = new Main();
         SixLineFix screen = new SixLineFix();
-        //String[] displayScreen = screen.get
+
         //Frame
         g2.setColor(new Color(98, 98, 93));
         g2.fillRect(25,25,400,500);
@@ -26,5 +27,10 @@ public class CalculatorComponent extends JComponent {
         g2.drawString(screen.screen[3],55,180);
         g2.drawString(screen.screen[4],55,200);
         g2.drawString(screen.screen[5],55,220);
+
+        //InfoFrame and InfoScreen
+        g2.setColor(new Color(208, 219, 227));
+        g2.fillRect(120,42,215,30);
     }
+
 }

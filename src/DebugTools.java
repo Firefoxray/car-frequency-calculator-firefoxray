@@ -1,5 +1,3 @@
-import java.lang.reflect.Array;
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 
 public class DebugTools {
@@ -16,19 +14,18 @@ public class DebugTools {
 
         //Debug Enablers
         boolean screenEffectsDebug = false;
-        boolean calculatorComponentDebug = true;
+        boolean calculatorComponentDebug = false;
         boolean calculatorDebug = true;
         boolean mainDebug = false;
         boolean sixLineFixDebug = true;
-        boolean debugToolsDebug = true;
-        boolean questionDebug = true;
+        boolean debugToolsDebug = false;
+        boolean questionDebug = false;
 
         //Debug Tools
         if (screenEffectsDebug) System.out.println(screenEffects.debugText);
-        if (sixLineFixDebug) {
-            sixLineFix.debug();
-            System.out.println(sixLineFix.debugText);
-        }
+        if (calculatorDebug) System.out.println(calculator.debugText);
+        if (sixLineFixDebug) System.out.println(sixLineFix.debugText);
+
     }
 
     public void debugMessages(int debugChooser)
@@ -37,7 +34,7 @@ public class DebugTools {
                 "so that I can test out my code, also, Lexus IS 300/" +
                 "....I had to, I can't think of anything right now... lol/" +
                 "Now, here is some random stuff to fill up the rest of this box./" +
-                "Nismo, TRD, Mazdaspeed, Mugen, Ralliart, F-Sport, STI";
+                "Nismo, TRD, Mazdaspeed, KAZQ46 ;), Ralliart, F-Sport, STI";
         String debug2 = "Takumi IRL";
         String debug3 = "I honestly dont know what im doing, nothing should/" +
                 "be working and thankfully nothing really/" +

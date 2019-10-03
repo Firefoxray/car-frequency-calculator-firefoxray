@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 public class SixLineFix {
 
-    String debugText;
+    static String debugText;
     Boolean converterRunning = false;
     Boolean displayerRunning = false;
 
@@ -18,6 +18,8 @@ public class SixLineFix {
         for (int n = 0; n <= convertArray.length; n++){
             if (lineAmount >= n) { screen[n] = convertArray[n]; } else { screen[n] = " "; }
         }
+        screenDisplay.revalidate(); screenDisplay.repaint();
+        debug();
     }
 
     public void displayer(String inputValue, int inputLine){
@@ -25,6 +27,7 @@ public class SixLineFix {
         displayerRunning = true;
         screen[inputLine] = inputValue;
         screenDisplay.revalidate(); screenDisplay.repaint();
+        debug();
     }
 
     public void debug(){
